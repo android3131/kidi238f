@@ -1,0 +1,32 @@
+<resources>
+    <string-array name="phone_codes">
+        <item>972</item>
+        <item>001</item>
+        <item>044</item>
+        <item>962</item>
+        <item>971</item>
+        <item>576</item>
+        <item>643</item>
+        <item>335</item>
+    </string-array>
+    <string-array name="countries">
+        <item>Israel</item>
+        <item>USA</item>
+        <item>UK</item>
+        <item>Jordan</item>
+        <item>UAE</item>
+    </string-array>
+    <string name="app_name">First Parent Register</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="retype_password">Retype password</string>
+    <string name="full_name">Full name</string>
+    <string name="date_time" translatable="false">select date and time</string>
+    <string name="back_label" translatable="false">Back</string>
+    <string name="choose_day" translatable="false">Day</string>
+    <string name="choose_month" translatable="false">Month</string>
+    <string name="choose_year" translatable="false">Year</string>
+    <string name="welcome_to_kidi" translatable="false">Welcome to KIDI</string>
+    <string name="back_to_2">Back to 2</string>
+</resources>
