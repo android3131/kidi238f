@@ -68,15 +68,15 @@ public class FirstParentReg extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (checkName() && checkEmail() && checkPhone() && check_password()) {
-                ParentGrp2 p = new ParentGrp2(fullName.getText().toString(), email.getText().toString()
-                        , password1.getText().toString(), password2.getText().toString(), phone.getText().toString());
+                ParentGrp2 p = new ParentGrp2(fullName.getText().toString(),phone.getText().toString(), email.getText().toString()
+                        , password1.getText().toString());
 
                 //parents.add(p);
                 Log.d("Muhannad", p.toString());
                 /**
                  * the new created parent, wrapped by retrofit in order to send post http request.
                  */
-                Call<List<ParentGrp2>> call = RetrofitClientGrp2.getInstance().getAPI().createPost(p);
+                Call<List<ParentGrp2>> call = RetrofitClientGrp2.getInstance().getAPI().createParent(p);
 
 
                 /**
@@ -91,6 +91,8 @@ public class FirstParentReg extends AppCompatActivity {
                         editor.putString("phone", phone.getText().toString());
                         editor.putString("password", password1.getText().toString());
                         editor.putInt("code", phoneCode.getSelectedItemPosition());
+                        List<ParentGrp2> prtLst = response.body();
+                        editor.putString("Id", prtLst.get(prtLst.size()-1).getId());
                         editor.commit();
                         Toast.makeText(FirstParentReg.this, "Data added to API", Toast.LENGTH_SHORT).show();
                         List<ParentGrp2> responseFromAPI = response.body();

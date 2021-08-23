@@ -8,7 +8,8 @@ public class ParentGrp2 {
     private String password;
     private String reTypePassword;
     private String phoneNum;
-    private boolean flag=true;
+    private String id;
+    private boolean flag = true;
     //private List<kid> myKids;
 
     /**
@@ -20,19 +21,27 @@ public class ParentGrp2 {
 
     /**
      * full constructor (with empty kids set).
+     *
      * @param fullName - the parent full name
-     * @param email - the parent email
+     * @param email    - the parent email
      * @param password - the parent password
-     * @param reTypePassword - the password reTyped
      * @param phoneNum - the parent phone number (without the area code).
      */
-    public ParentGrp2(String fullName, String email, String password, String reTypePassword, String phoneNum) {
+    public ParentGrp2(String fullName, String phoneNum, String email, String password) {
         setFullName(fullName);
         setEmail(email);
-        setPassword(password, reTypePassword);
+        setPassword(password);
         setPhoneNum(phoneNum);
         //this.myKids=new ArrayList<>();
 
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFullName() {
@@ -41,6 +50,7 @@ public class ParentGrp2 {
 
     /**
      * default set, with a regex of full name that checks, the name is only letters and white spaces.
+     *
      * @param fullName
      */
     public void setFullName(String fullName) {
@@ -57,6 +67,7 @@ public class ParentGrp2 {
 
     /**
      * default set, uses patterns to check the given email is a valid email (with @domain.com etc)
+     *
      * @param email
      */
     public void setEmail(String email) {
@@ -72,15 +83,13 @@ public class ParentGrp2 {
 
     /**
      * sets password, with checking that the password and the reType are the same.
+     *
      * @param password
-     * @param reTypePassword
      */
-    public void setPassword(String password, String reTypePassword) {
-        setReTypePassword(reTypePassword);
-        if (password.equals(this.reTypePassword))
-            this.password = password;
-        else
-            flag = false;
+    public void setPassword(String password) {
+
+        this.password = password;
+
     }
 
     public String getReTypePassword() {
@@ -97,6 +106,7 @@ public class ParentGrp2 {
 
     /**
      * default set, checks that the phone number is valid.
+     *
      * @param phoneNum
      */
     public void setPhoneNum(String phoneNum) {
@@ -113,7 +123,7 @@ public class ParentGrp2 {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", reTypePassword='" + reTypePassword + '\'' +
-                ", phoneNum='" + phoneNum + '\''+
+                ", phoneNum='" + phoneNum + '\'' +
                 '}';
     }
 }

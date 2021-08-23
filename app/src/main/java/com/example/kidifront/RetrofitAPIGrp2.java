@@ -16,7 +16,7 @@ public interface RetrofitAPIGrp2 {
      */
     @POST("createParent")
     //creating a method to post our data.
-    Call<List<com.example.kidifront.ParentGrp2>> createPost(@Body com.example.kidifront.ParentGrp2 parent);
+    Call<List<ParentGrp2>> createParent(@Body ParentGrp2 parent);
 
 
     /**
@@ -25,7 +25,7 @@ public interface RetrofitAPIGrp2 {
      * @return list of kids.
      */
     @POST("createKid")
-    Call<List<com.example.kidifront.KidGrp2>> createKid(@Body com.example.kidifront.KidGrp2 my_kid);
+    Call<List<KidGrp2>> createKid(@Body KidGrp2 my_kid);
 
 }
 
