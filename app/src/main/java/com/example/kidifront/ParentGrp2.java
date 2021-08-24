@@ -6,8 +6,8 @@ public class ParentGrp2 {
     private String fullName;
     private String email;
     private String password;
-    private String reTypePassword;
-    private String phoneNum;
+    //private String reTypePassword;
+    private String phoneNumber;
     private String id;
     private boolean flag = true;
     //private List<kid> myKids;
@@ -29,9 +29,9 @@ public class ParentGrp2 {
      */
     public ParentGrp2(String fullName, String phoneNum, String email, String password) {
         setFullName(fullName);
+        setPhoneNumber(phoneNum);
         setEmail(email);
         setPassword(password);
-        setPhoneNum(phoneNum);
         //this.myKids=new ArrayList<>();
 
     }
@@ -92,28 +92,28 @@ public class ParentGrp2 {
 
     }
 
-    public String getReTypePassword() {
-        return reTypePassword;
-    }
+//    public String getReTypePassword() {
+//        return reTypePassword;
+//    }
 
-    public void setReTypePassword(String reTypePassword) {
-        this.reTypePassword = reTypePassword;
-    }
+   // public void setReTypePassword(String reTypePassword) {
+//        this.reTypePassword = reTypePassword;
+//    }
 
-    public String getPhoneNum() {
-        return phoneNum;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     /**
      * default set, checks that the phone number is valid.
      *
-     * @param phoneNum
+     * @param phoneNumber
      */
-    public void setPhoneNum(String phoneNum) {
-        if (Patterns.PHONE.matcher(phoneNum).matches())
-            this.phoneNum = phoneNum;
+    public void setPhoneNumber(String phoneNumber) {
+        if (Patterns.PHONE.matcher(phoneNumber).matches())
+            this.phoneNumber = phoneNumber;
         else
-            flag = false;
+            this.phoneNumber = "123456789";
     }
 
     @Override
@@ -122,8 +122,7 @@ public class ParentGrp2 {
                 "fullName='" + fullName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", reTypePassword='" + reTypePassword + '\'' +
-                ", phoneNum='" + phoneNum + '\'' +
+                ", phoneNum='" + phoneNumber + '\'' +
                 '}';
     }
 }
