@@ -1,4 +1,4 @@
-package com.example.myapplication19;
+package front3java;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import com.example.myapplication19.R;
 
 import java.util.ArrayList;
 
-public class AdapterRV extends ArrayAdapter<RVitem> {
+public class dapterRV extends ArrayAdapter<RVitem> {
 
     public AdapterRV(Context context,
                      ArrayList<RVitem> algorithmList)

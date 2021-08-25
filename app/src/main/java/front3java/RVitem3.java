@@ -1,4 +1,4 @@
-package com.example.myapplication3;
+package front3java;
 
 public class RVitem3 {
     private String algorithmName;

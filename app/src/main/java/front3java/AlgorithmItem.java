@@ -1,4 +1,4 @@
-package com.example.myapplication11;
+package front3java;
 
 public class AlgorithmItem   {
     private String courseName;

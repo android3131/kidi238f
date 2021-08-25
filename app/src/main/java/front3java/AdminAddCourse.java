@@ -1,4 +1,4 @@
-package com.example.myapplication3;
+package front3java;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.util.Pair;
@@ -61,7 +61,7 @@ public class AdminAddCourse extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.admin_add_course);
+        setContentView(R.layout.front3xml.admin_add_course);
 
         //select range of dates for the course
         mSelectedDateText = findViewById(R.id.selected_date);

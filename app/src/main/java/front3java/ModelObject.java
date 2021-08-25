@@ -1,4 +1,4 @@
-package com.example.myapplication11;
+package front3java;
 
 public enum ModelObject {
     RED(R.string.red,R.layout.view_red),
